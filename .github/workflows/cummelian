@@ -1,0 +1,30 @@
+# A simple action usage
+name: Build For Camellian
+on:
+  workflow_dispatch:
+
+jobs:
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+
+    steps:
+      - name: Build Kernel
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/MiCode/Xiaomi_Kernel_OpenSource
+          kernel-dir: msm-4.14
+          kernel-branch: camellian-t-oss
+          config: camellian_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: false
+          ksu-version: main
+          android-version: 13
+          aosp-clang-version: r383902
+          disable-lto: true
+          anykernel3: true
