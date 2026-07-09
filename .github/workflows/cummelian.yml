@@ -1,5 +1,5 @@
 # A simple action usage
-name: Build For Camellian
+name: Build Kernul
 on:
   workflow_dispatch:
 
