@@ -17,7 +17,7 @@ jobs:
         with:
           kernel-url: https://github.com/MiCode/Xiaomi_Kernel_OpenSource
           kernel-dir: msm-4.14
-          kernel-branch: camellia-t-oss
+          kernel-branch: camellian-t-oss
           config: camellia_defconfig
           arch: arm64
           aosp-gcc: true
